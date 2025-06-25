@@ -9,17 +9,20 @@
       padding: 0;
       font-family: sans-serif;
       background-color: #ffffff;
+      display: flex;
+      justify-content: center;
     }
 
-    .tableauPlaceholder {
-      width: 1000px; /* largura fixa ou ajustável conforme necessário */
-      margin: 0 auto; /* centraliza horizontalmente */
+    #vizContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
 
-    @media (max-width: 1024px) {
-      .tableauPlaceholder {
-        width: 100%; /* para dispositivos menores */
-      }
+    .tableauViz {
+      margin: 0 auto;
+      display: block;
     }
   </style>
 </head>
