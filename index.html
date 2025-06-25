@@ -10,10 +10,28 @@
       height: 100%;
       width: 100%;
       overflow-x: hidden;
+      font-family: sans-serif;
     }
 
-    #vizContainer {
-      max-width: 100%;
+    table.layout {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.layout td {
+      vertical-align: top;
+    }
+
+    td.left, td.right {
+      width: 5%;
+    }
+
+    td.center {
+      width: 90%;
+    }
+
+    .tableauPlaceholder {
+      width: 100%;
       overflow-x: auto;
     }
 
@@ -26,35 +44,42 @@
 </head>
 <body>
 
-  <div class='tableauPlaceholder' id='vizContainer' style='position: relative'>
-    <noscript>
-      <a href='https://public.tableau.com/views/Litigancia_Climatica_V1/Dashboard1'>
-        <img alt='Dashboard' src='https://public.tableau.com/static/images/Li/Litigancia_Climatica_V1/Dashboard1/1.png' style='border: none' />
-      </a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-      <param name='embed_code_version' value='3' />
-      <param name='site_root' value='' />
-      <param name='name' value='Litigancia_Climatica_V1/Dashboard1' />
-      <param name='tabs' value='yes' />
-      <param name='toolbar' value='yes' />
-      <param name='static_image' value='https://public.tableau.com/static/images/Li/Litigancia_Climatica_V1/Dashboard1/1.png' />
-      <param name='animate_transition' value='yes' />
-      <param name='display_static_image' value='yes' />
-      <param name='display_spinner' value='yes' />
-      <param name='display_overlay' value='yes' />
-      <param name='display_count' value='yes' />
-      <param name='language' value='pt-BR' />
-    </object>
-  </div>
+  <table class="layout">
+    <tr>
+      <td class="left"></td>
+      <td class="center">
+        <div class='tableauPlaceholder' id='vizContainer' style='position: relative'>
+          <noscript>
+            <a href='https://public.tableau.com/views/Litigancia_Climatica_V1/Dashboard1'>
+              <img alt='Dashboard' src='https://public.tableau.com/static/images/Li/Litigancia_Climatica_V1/Dashboard1/1.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='Litigancia_Climatica_V1/Dashboard1' />
+            <param name='tabs' value='yes' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Li/Litigancia_Climatica_V1/Dashboard1/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='pt-BR' />
+          </object>
+        </div>
+      </td>
+      <td class="right"></td>
+    </tr>
+  </table>
 
   <script type='text/javascript'>
     var divElement = document.getElementById('vizContainer');
     var vizElement = divElement.getElementsByTagName('object')[0];
-    // Usar 100% para evitar cortes em qualquer resolução
     vizElement.style.width = '100%';
-    vizElement.style.height = '2000px'; // ajuste se quiser mais ou menos altura
+    vizElement.style.height = '2000px'; // ajuste conforme necessário
     vizElement.style.maxWidth = '100%';
     vizElement.style.minWidth = '0';
     var scriptElement = document.createElement('script');
