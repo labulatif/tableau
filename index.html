@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dashboard: Litigância Climática</title>
+  <meta charset="UTF-8">
+  <title>Dashboard - Litigância Climática</title>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-    }
+    body { margin: 0; padding: 0; }
   </style>
 </head>
 <body>
 
-  <!-- Código embed do Tableau -->
-  <div class='tableauPlaceholder' id='viz1750875886341' style='position: relative'>
+  <div class='tableauPlaceholder' id='vizContainer' style='position: relative'>
     <noscript>
-      <a href='#'>
-        <img alt='Dashboard estático' src='https://public.tableau.com/static/images/Li/Litigancia_Climatica_V1/Dashboard1/1_rss.png' style='border: none' />
+      <a href='https://public.tableau.com/views/Litigancia_Climatica_V1/Dashboard1'>
+        <img alt='Dashboard' src='https://public.tableau.com/static/images/Li/Litigancia_Climatica_V1/Dashboard1/1.png' style='border: none' />
       </a>
     </noscript>
     <object class='tableauViz' style='display:none;'>
@@ -33,27 +28,22 @@
       <param name='display_spinner' value='yes' />
       <param name='display_overlay' value='yes' />
       <param name='display_count' value='yes' />
-      <param name='language' value='en-US' />
+      <param name='language' value='pt-BR' />
     </object>
   </div>
 
   <script type='text/javascript'>
-    var divElement = document.getElementById('viz1750875886341');
+    var divElement = document.getElementById('vizContainer');
     var vizElement = divElement.getElementsByTagName('object')[0];
     if (divElement.offsetWidth > 800) {
-      vizElement.style.minWidth = '1300px';
+      vizElement.style.minWidth = '1000px';
       vizElement.style.maxWidth = '100%';
-      vizElement.style.minHeight = '2150px';
-      vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
-    } else if (divElement.offsetWidth > 500) {
-      vizElement.style.minWidth = '1300px';
-      vizElement.style.maxWidth = '100%';
-      vizElement.style.minHeight = '2150px';
+      vizElement.style.minHeight = '2000px';
       vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
     } else {
       vizElement.style.width = '100%';
-      vizElement.style.minHeight = '3550px';
-      vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px';
+      vizElement.style.minHeight = '1800px';
+      vizElement.style.maxHeight = (divElement.offsetWidth * 1.5) + 'px';
     }
     var scriptElement = document.createElement('script');
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
