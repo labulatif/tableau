@@ -36,13 +36,13 @@
     var divElement = document.getElementById('vizContainer');
     var vizElement = divElement.getElementsByTagName('object')[0];
     if (divElement.offsetWidth > 800) {
-      vizElement.style.minWidth = '1000px';
+      vizElement.style.minWidth = '1400px';
       vizElement.style.maxWidth = '100%';
       vizElement.style.minHeight = '2000px';
       vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
     } else {
       vizElement.style.width = '100%';
-      vizElement.style.minHeight = '1800px';
+      vizElement.style.minHeight = '2100px';
       vizElement.style.maxHeight = (divElement.offsetWidth * 1.5) + 'px';
     }
     var scriptElement = document.createElement('script');
