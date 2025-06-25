@@ -4,7 +4,24 @@
   <meta charset="UTF-8">
   <title>Dashboard - Litigância Climática</title>
   <style>
-    body { margin: 0; padding: 0; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    #vizContainer {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .tableauViz {
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -35,16 +52,11 @@
   <script type='text/javascript'>
     var divElement = document.getElementById('vizContainer');
     var vizElement = divElement.getElementsByTagName('object')[0];
-    if (divElement.offsetWidth > 800) {
-      vizElement.style.minWidth = '1400px';
-      vizElement.style.maxWidth = '100%';
-      vizElement.style.minHeight = '2000px';
-      vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
-    } else {
-      vizElement.style.width = '100%';
-      vizElement.style.minHeight = '2100px';
-      vizElement.style.maxHeight = (divElement.offsetWidth * 1.5) + 'px';
-    }
+    // Usar 100% para evitar cortes em qualquer resolução
+    vizElement.style.width = '100%';
+    vizElement.style.height = '2000px'; // ajuste se quiser mais ou menos altura
+    vizElement.style.maxWidth = '100%';
+    vizElement.style.minWidth = '0';
     var scriptElement = document.createElement('script');
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
